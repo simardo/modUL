@@ -62,7 +62,8 @@
         "karma-webpack": "^2.0.2",
         "chromedriver": "^2.27.2",
         "nightwatch": "^0.9.12",
-        "selenium-server": "^3.0.1"
+        "selenium-server": "^3.0.1",
+        "vuejs-components": "^0.1.0"
     },
     "repository": {
         "type": "git",

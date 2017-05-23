@@ -2,16 +2,15 @@ import './polyfills';
 import Vue from 'vue';
 import store from './store';
 import router from './router';
-import axios from 'axios';
+import Modul from './components/modul/modul';
 
 Vue.config.productionTip = false;
-
-(Vue.prototype as any).$http = axios;
 
 const vue = new Vue({
     router,
     store,
-    template: '<router-view></router-view>'
+    template: '<modul></modul>',
+    components: { Modul }
 });
 
 vue.$mount('#vue');
