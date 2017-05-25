@@ -1,0 +1,11 @@
+<div>
+    <h1>{{$route.meta}}</h1>
+    <p>patate</p>
+    <ul>
+        <li v-for="item in state.composant.portrait">{{item.title}}</li>
+    </ul>
+    <div>
+        <h3>Portrait</h3>
+        <mpo-dynamic-template :template="content"></mpo-dynamic-template>
+    </div>
+</div>

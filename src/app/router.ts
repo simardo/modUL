@@ -4,6 +4,7 @@ import { ExperienceUnifiee } from './components/experience-unifiee/experience-un
 import { NormesGraphiques } from './components/normes-graphiques/normes-graphiques';
 import { ReglesEditoriales } from './components/regles-editoriales/regles-editoriales';
 import { Composants } from './components/composants/composants';
+import { Composant } from './components/composants/composant';
 import { Ecosysteme } from './components/ecosysteme/ecosysteme';
 
 Vue.use(Router);
@@ -25,7 +26,19 @@ export default new Router({
         },
         {
             path: '/composants',
-            component: Composants
+            component: Composants,
+            children: [
+                {
+                    path: 'bouton',
+                    meta: 'button',
+                    component: Composant
+                },
+                {
+                    path: 'liste',
+                    meta: 'list',
+                    component: Composant
+                }
+            ]
         },
         {
             path: '/ecosysteme',

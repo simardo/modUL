@@ -1,19 +1,26 @@
 import Vue from 'vue';
 import Vuex, { MutationTree } from 'vuex';
-import { MyState } from './my-State';
-import { ChangeValueMutations } from './mutations';
+import { ModulState } from './modul-state';
+import { ModulActions } from './actions';
+import { ModulMutations } from './mutations';
+import { ComposantState } from '@/app/components/composants/composant.state';
 
 Vue.use(Vuex);
 
-const myState: MyState = new MyState();
-const mutations: MutationTree<MyState> = {
-    [ChangeValueMutations.TYPE]: ChangeValueMutations.mutate
+const modulState: ModulState = new ModulState();
+const mutations: MutationTree<ModulState> = {
+    [ModulMutations.COMPOSANT_GET]: ModulMutations.getComposantSucces
 };
 
-const store: Vuex.Store<MyState> = new Vuex.Store<MyState>({
-    strict: true, // TODO debug mode only
-    state: myState,
-    mutations: mutations
+const actions: Vuex.ActionTree<ModulState, ModulState> = {
+    [ModulActions.COMPOSANT_GET]: ModulActions.getComposantAction
+};
+
+const store: Vuex.Store<ModulState> = new Vuex.Store<ModulState>({
+    // strict: true, // TODO debug mode only
+    state: modulState,
+    mutations: mutations,
+    actions: actions
 });
 
 export default store;

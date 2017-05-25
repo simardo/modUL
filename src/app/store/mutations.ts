@@ -1,10 +1,11 @@
 import { Mutation } from 'vuex';
-import { MyState } from './my-State';
+import { ModulState } from './modul-state';
+import { ComposantMeta } from 'vuejs-components/dist/components-meta';
 
-export class ChangeValueMutations {
-    public static TYPE: string = 'CHANGE_VALUE_MUTATION';
+export class ModulMutations {
+    public static COMPOSANT_GET: string = 'COMPOSANT_GET';
 
-    public static mutate: Mutation<MyState> = (state: MyState, payload: any) => {
-        state.value1 = 'value-' + payload;
+    public static getComposantSucces: Mutation<ModulState> = (state: ModulState, composant: ComposantMeta) => {
+        state.composantState.composant = composant;
     }
 }
