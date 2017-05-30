@@ -3,16 +3,18 @@ import Vuex, { MutationTree } from 'vuex';
 import { ModulState } from './modul-state';
 import { ModulActions } from './actions';
 import { ModulMutations } from './mutations';
-import { ComposantState } from '@/app/components/composants/composant.state';
 
 Vue.use(Vuex);
 
 const modulState: ModulState = new ModulState();
 const mutations: MutationTree<ModulState> = {
+    [ModulMutations.COMPONENTS_META_GET]: ModulMutations.getComponentsMeta,
+    [ModulMutations.COMPONENTS_META_GET_SUCCES]: ModulMutations.getComponentsMetaSucces,
     [ModulMutations.COMPOSANT_GET]: ModulMutations.getComposantSucces
 };
 
 const actions: Vuex.ActionTree<ModulState, ModulState> = {
+    [ModulActions.COMPONENTS_META_GET]: ModulActions.getComponentsMetaAction,
     [ModulActions.COMPOSANT_GET]: ModulActions.getComposantAction
 };
 

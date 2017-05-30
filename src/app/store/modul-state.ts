@@ -1,5 +1,7 @@
-import { ComposantState } from '@/app/components/composants/composant.state';
+import { ComponentRoute } from './components-meta-state';
+import { ComponentMeta } from 'modul-components/dist/meta';
 
 export class ModulState {
-    public composantState: ComposantState = new ComposantState();
+    public componentRoutes: ComponentRoute[] = [];
+    public composantState: ComponentMeta | undefined = undefined;
 }
