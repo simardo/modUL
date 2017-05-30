@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router, { RouteConfig } from 'vue-router';
-import { ExperienceUnifiee } from './components/experience-unifiee/experience-unifiee';
-import { NormesGraphiques } from './components/normes-graphiques/normes-graphiques';
-import { ReglesEditoriales } from './components/regles-editoriales/regles-editoriales';
-import { Composants } from './components/composants/composants';
-import { Composant } from './components/composants/composant';
-import { Ecosysteme } from './components/ecosysteme/ecosysteme';
+import { UnifiedExperience } from './components/unified-experience/unified-experience';
+import { VisualStandards } from './components/visual-standards/visual-standards';
+import { WritingRules } from './components/writing-rules/writing-rules';
+import { Components } from './components/libs/components';
+import { ComponentViewer } from './components/libs/component';
+import { Ecosystem } from './components/ecosystem/ecosystem';
 import Meta from 'modul-components/dist/meta';
 
 Vue.use(Router);
@@ -16,7 +16,7 @@ Meta.getTagsByLanguage('fr').forEach(tag => {
     componentsChildren.push({
         path: tag,
         meta: tag,
-        component: Composant
+        component: ComponentViewer
     });
 });
 
@@ -25,24 +25,24 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: ExperienceUnifiee
+            component: UnifiedExperience
         },
         {
             path: '/normes-graphiques',
-            component: NormesGraphiques
+            component: VisualStandards
         },
         {
             path: '/regles-editoriales',
-            component: ReglesEditoriales
+            component: WritingRules
         },
         {
             path: '/composants',
-            component: Composants,
+            component: Components,
             children: componentsChildren
         },
         {
             path: '/ecosysteme',
-            component: Ecosysteme
+            component: Ecosystem
         }
     ]
 });

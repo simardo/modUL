@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Watch } from 'vue-property-decorator';
-import WithRender from './composant.html?style=./composant.scss';
+import WithRender from './component.html?style=./component.scss';
 import { ModulActions } from '@/app/store/actions';
 import { Overview, OverviewType } from 'modul-components/dist/meta';
 
@@ -11,7 +11,7 @@ import { ServiceMixin } from 'modul-components/dist/services';
 @Component({
     mixins: [ServiceMixin]
 })
-export class Composant extends Vue {
+export class ComponentViewer extends Vue {
     public mounted() {
         this.getMeta();
     }
