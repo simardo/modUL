@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'from-git' ]
+2 info using npm@5.6.0
+3 info using node@v9.4.0
+4 info git [ 'status', '--porcelain' ]
+5 info git [ 'describe', '--abbrev=0' ]
+6 verbose stack Error: tag3 is not a valid version
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:84:29
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
+6 verbose stack     at ChildProcess.exithandler (child_process.js:264:7)
+6 verbose stack     at ChildProcess.emit (events.js:160:13)
+6 verbose stack     at maybeClose (internal/child_process.js:943:16)
+6 verbose stack     at Socket.stream.socket.on (internal/child_process.js:363:11)
+6 verbose stack     at Socket.emit (events.js:160:13)
+6 verbose stack     at Pipe._handle.close [as _onclose] (net.js:559:12)
+7 verbose cwd /var/lib/jenkins-slave/workspace/creer-branche-pipeline
+8 verbose Linux 3.10.0-693.17.1.el7.x86_64
+9 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "version" "from-git"
+10 verbose node v9.4.0
+11 verbose npm  v5.6.0
+12 error tag3 is not a valid version
+13 verbose exit [ 1, true ]
