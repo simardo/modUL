@@ -14,7 +14,9 @@
         "e2e": "node tests/e2e/index.js",
         "test": "npm run unitall && npm run e2e",
         "tslint": "tslint -c conf/tslint.json -e 'src/**/*.d.ts' -e 'tests/unit/**/*.d.ts' -s node_modules/custom-tslint-formatters/formatters -t grouped 'src/**/*.ts' 'tests/unit/**/*.ts' 'tests/e2e/*.ts'",
-        "stylelint": "stylelint \"src/**/*.css\" \"src/**/*.scss\" --config conf/stylelint.json"
+        "stylelint": "stylelint \"src/**/*.css\" \"src/**/*.scss\" --config conf/stylelint.json",
+        "print_version_win": "echo %npm_package_version%",
+        "print_version_nx": "echo $npm_package_version"
     },
     "dependencies": {
         "vue": "^2.3.2",
