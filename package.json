@@ -1,6 +1,6 @@
 {
     "name": "modul",
-    "version": "0.1.7",
+    "version": "0.1.8-beta.0",
     "description": "Banc d'essai pour l'application démo MODUL.",
     "author": "Martin Simard <martin.simard@dti.ulaval.ca>",
     "private": true,
